@@ -1,0 +1,200 @@
+Patient: 67-year-old female, non-smoker, does not have diabetes, does not drink alcohol, not obese, physically low active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 78-year-old male, smoker, has diabetes, drinks alcohol, not obese, physically low active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 45-year-old female, smoker, has diabetes, drinks alcohol, not obese, physically medium active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 74-year-old female, non-smoker, has diabetes, does not drink alcohol, not obese, physically low active, with good access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 62-year-old male, non-smoker, has diabetes, does not drink alcohol, not obese, physically low active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 81-year-old male, smoker, has diabetes, drinks alcohol, not obese, physically medium active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 71-year-old male, smoker, does not have diabetes, drinks alcohol, not obese, physically medium active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 44-year-old male, smoker, does not have diabetes, drinks alcohol, obese, physically high active, with good access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 82-year-old female, smoker, has diabetes, does not drink alcohol, not obese, physically high active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 69-year-old male, non-smoker, does not have diabetes, drinks alcohol, not obese, physically high active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 79-year-old male, smoker, has diabetes, drinks alcohol, not obese, physically medium active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 44-year-old female, non-smoker, has diabetes, drinks alcohol, obese, physically high active, with good access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 68-year-old female, non-smoker, has diabetes, drinks alcohol, not obese, physically medium active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 61-year-old male, non-smoker, does not have diabetes, drinks alcohol, not obese, physically low active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 62-year-old male, smoker, does not have diabetes, drinks alcohol, not obese, physically medium active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 67-year-old male, non-smoker, has diabetes, does not drink alcohol, not obese, physically low active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 55-year-old male, smoker, has diabetes, drinks alcohol, not obese, physically high active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 56-year-old female, smoker, has diabetes, does not drink alcohol, obese, physically low active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 79-year-old female, non-smoker, does not have diabetes, drinks alcohol, not obese, physically low active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 74-year-old male, smoker, has diabetes, drinks alcohol, not obese, physically medium active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 68-year-old female, non-smoker, does not have diabetes, drinks alcohol, not obese, physically low active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 83-year-old female, non-smoker, has diabetes, drinks alcohol, not obese, physically high active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 45-year-old male, non-smoker, has diabetes, drinks alcohol, obese, physically medium active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 63-year-old male, smoker, does not have diabetes, does not drink alcohol, obese, physically medium active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 66-year-old female, smoker, does not have diabetes, drinks alcohol, not obese, physically medium active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 68-year-old female, non-smoker, has diabetes, drinks alcohol, obese, physically low active, with good access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 71-year-old male, smoker, does not have diabetes, drinks alcohol, obese, physically low active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 78-year-old male, non-smoker, does not have diabetes, does not drink alcohol, not obese, physically high active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 85-year-old female, non-smoker, does not have diabetes, drinks alcohol, not obese, physically medium active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 83-year-old male, non-smoker, has diabetes, does not drink alcohol, obese, physically low active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 58-year-old male, non-smoker, does not have diabetes, does not drink alcohol, obese, physically low active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 39-year-old female, non-smoker, does not have diabetes, does not drink alcohol, obese, physically medium active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 45-year-old female, smoker, has diabetes, drinks alcohol, not obese, physically low active, with good access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 76-year-old male, non-smoker, has diabetes, does not drink alcohol, not obese, physically medium active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 85-year-old female, smoker, does not have diabetes, drinks alcohol, not obese, physically high active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 74-year-old female, smoker, has diabetes, does not drink alcohol, not obese, physically medium active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 74-year-old female, smoker, does not have diabetes, drinks alcohol, obese, physically high active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 72-year-old male, non-smoker, has diabetes, drinks alcohol, not obese, physically low active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 69-year-old female, smoker, does not have diabetes, drinks alcohol, not obese, physically high active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 84-year-old male, non-smoker, has diabetes, does not drink alcohol, not obese, physically medium active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 74-year-old male, smoker, does not have diabetes, drinks alcohol, not obese, physically low active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 50-year-old female, non-smoker, has diabetes, does not drink alcohol, not obese, physically low active, with poor access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 58-year-old female, non-smoker, has diabetes, drinks alcohol, obese, physically low active, with poor access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 49-year-old female, non-smoker, has diabetes, drinks alcohol, not obese, physically high active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 46-year-old female, non-smoker, has diabetes, drinks alcohol, not obese, physically low active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 55-year-old male, non-smoker, has diabetes, drinks alcohol, obese, physically high active, with poor access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 73-year-old male, smoker, has diabetes, does not drink alcohol, not obese, physically low active, with good access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are not obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 43-year-old male, smoker, has diabetes, does not drink alcohol, obese, physically medium active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 36-year-old female, non-smoker, has diabetes, does not drink alcohol, obese, physically high active, with moderate access to healthcare.
+Risk Prediction: HIGH RISK
+Insight: This patient profile indicates a high risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---
+Patient: 67-year-old female, non-smoker, has diabetes, drinks alcohol, obese, physically high active, with good access to healthcare.
+Risk Prediction: LOW RISK
+Insight: This patient profile indicates a low risk of pancreatic cancer. Patients with similar characteristics—especially those who are obese, have diabetes, a history of smoking, and limited access to healthcare—should be prioritized for early screening such as CT or MRI imaging, and monitored using tumor markers like CA 19-9.
+---

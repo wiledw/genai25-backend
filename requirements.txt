@@ -1,0 +1,12 @@
+fastapi
+pydantic
+google-generativeai
+python-dotenv
+numpy
+joblib
+cohere
+pandas
+annoy
+uvicorn
+xgboost
+lightgbm

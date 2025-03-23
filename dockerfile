@@ -1,24 +1,22 @@
-# Step 1: Use a Python base image
-FROM python:3.10-slim AS base
+FROM python:3.11-slim
 
-# Step 2: Install dependencies
-RUN apt-get update && apt-get install -y \
-    nginx \
-    && rm -rf /var/lib/apt/lists/*
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PORT=8080 
 
-# Step 3: Set the working directory in the container
+# Set working directory
 WORKDIR /app
 
-# Step 4: Copy the FastAPI app and Nginx config
-COPY . /app
-COPY nginx.conf /etc/nginx/nginx.conf
+# Copy and install dependencies
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
-# Step 5: Install Python dependencies
-RUN pip install --no-cache-dir fastapi uvicorn google-generativeai pydantic python-dotenv
+# Copy application files
+COPY . .
 
-# Step 6: Expose ports for Nginx and Uvicorn
+# Expose port (Cloud Run ignores this but useful for local testing)
 EXPOSE 8080
 
-# Step 7: Start both Nginx and Uvicorn in the container
-CMD service nginx start && uvicorn main:app --host 0.0.0.0 --port 8000
-
+# Start FastAPI application with uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

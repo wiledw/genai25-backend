@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Form, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import google.generativeai as genai
 from dotenv import load_dotenv
@@ -8,6 +9,8 @@ import joblib
 import cohere
 import pandas as pd
 from annoy import AnnoyIndex
+import httpx
+import base64
 
 # Load environment variables
 load_dotenv()
@@ -16,6 +19,14 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://pancrai.vercel.app","http://localhost:3000"],  # Add your frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 model = joblib.load("/Users/wiledw/genai25-backend/cancer_detection_model_LGBM.pkl")
 
@@ -27,6 +38,7 @@ class ModelOutput(BaseModel):
 
 # Define the input data schema
 class UserData(BaseModel):
+    patientId:float
     age: float
     gender: str  # Male or Female
     obesity: float
@@ -64,11 +76,46 @@ def encode_data(user_data: UserData):
 
 # Combined endpoint for prediction and RAG analysis
 @app.post("/combined_analysis")
-async def combined_analysis(user_data: UserData):
+async def combined_analysis(
+    data: str = Form(...),
+    file: UploadFile = File(None)
+):
     try:
-        # Encode the input data into the required format
-        encoded_user_data = encode_data(user_data)
-        print(encoded_user_data)
+        # Parse the JSON string from form data
+        user_data = UserData.parse_raw(data)
+        
+        if file:
+            # Read the .nii.gz file content
+            file_content = await file.read()
+
+            print('sending to mac endpoint')
+            async with httpx.AsyncClient(timeout=65535.0) as client:  
+                headers = {'Content-Type': 'application/octet-stream'}
+                response = await client.post(
+                    'http://54.196.123.25:8000/upload/',
+                    content=file_content,
+                    headers=headers
+                )
+                print("imhere")
+                print("Response status:", response)
+                h = response.read()
+                g = open('result.png', 'wb')
+                g.write(h)
+                g.close()
+                # print("Response content:", await response.text())
+            
+        
+        # Extract patient ID
+        print(user_data)
+        patient_id = user_data.patientId
+        print(f"Patient ID: {patient_id}")
+
+        # Remove the patient ID from the user_data
+        user_data_without_id = user_data.copy()  # Make a copy of user_data
+        del user_data_without_id.patientId  # Remove the patient ID from the copy
+
+        # Encode the remaining user data
+        encoded_user_data = encode_data(user_data_without_id)
 
         # Ensure the prediction input matches the training data feature names
         feature_names = ['age', 'gender', 'obesity', 'smoking', 'alcohol', 'diabetes', 'activity', 'healthcare']
@@ -91,6 +138,9 @@ async def combined_analysis(user_data: UserData):
                 "confidence": f"{probability:.2%}",
                 "message": "You are at low risk for pancreatic cancer."
             }
+        
+        print("--------------------------")
+        print("first model result", prediction_result)
 
         # Construct a query string from user data
         query = (
@@ -98,15 +148,15 @@ async def combined_analysis(user_data: UserData):
             f"obese: {user_data.obesity}, "
             f"smoker: {user_data.smoking}, "
             f"with healthcare access: {user_data.healthcare} "
-            f"and physical activity: {user_data.activity}. "
+            f"and physical activity: {user_data.activity}, "
             f"Drinks alcohol: {user_data.alcohol} "
-            f"and has diabetes: {user_data.diabetes}."
+            f"and has diabetes: {user_data.diabetes}"
         )
 
         # Initialize Cohere client
         co = cohere.Client(os.getenv("COHERE_API_KEY"))
 
-                # Load and split synthetic RAG documents
+        # Load and split synthetic RAG documents
         with open("synthetic_patient_profiles.txt", "r") as f:
             documents = f.read().split("---\n")
         documents = [doc.strip() for doc in documents if doc.strip()]
@@ -134,8 +184,15 @@ async def combined_analysis(user_data: UserData):
             top_matches = [documents[i] for i in indices[0]]
         else:
             raise ValueError("No valid neighbors found.")
+        
+        print("--------------------------------")
+        print("This is the query:  ",query)
+        print("Top matches")
+        print("1    ", top_matches[0])
+        print("2    ", top_matches[1])
+        print("--------------------------------")
 
-
+        
         # Generate GenAI Explanation
         prompt = f"""You are a helpful AI medical assistant reviewing a patient profile.
 
@@ -148,10 +205,11 @@ async def combined_analysis(user_data: UserData):
         :two: {top_matches[1]}
 
         :brain: Based on this information, provide:
-        - A clear risk level (low, medium, high)
-        - A brief medical insight
-        - A recommendation for next steps
+        - A brief medical insight considering the patient's profile and the matched patients.
+        - A recommendation for next steps tailored to this patient's profile, considering that the patient's age may influence the appropriateness of the matched profiles. 
+        - If there is a significant age disparity between the patient and the matched profiles, acknowledge that their risk levels or necessary next steps may differ due to the age factor.
         """
+
 
         response = co.generate(
             prompt=prompt,
@@ -161,26 +219,59 @@ async def combined_analysis(user_data: UserData):
         )
 
         rag_result = {"rag_explanation": response.generations[0].text.strip()}
+        print("--------------------------")
+        print("rag result", rag_result)
 
         # Combine results into a ModelOutput format
         combined_result = ModelOutput(
-            result_text=f"Prediction: {prediction_result['prediction']}, RAG: {rag_result['rag_explanation']}",
+            result_text=f"Prediction: {prediction_result['prediction']}, RAG medical explanation: {rag_result['rag_explanation']}",
             confidence=float(prediction_result['confidence'].replace('%', '')) / 100.0  # Convert percentage to float
         )
-
+        print("--------------------------")
+        print("patient data:  ", query)
         # Feed combined result into analyze_model_output
         prompt = f"""
-        A pancreatic cancer detection model produced the following results:
+            A pancreatic cancer detection model produced the following results:
 
-        - Diagnosis: {combined_result.result_text}
-        - Confidence Score: {combined_result.confidence:.2f}
+            - Diagnosis: {combined_result.result_text}
+            - Confidence Score: {combined_result.confidence:.2f}
 
-        Provide a structured medical diagnosis summary and explain it in patient-friendly terms.
+            Provide a structured medical diagnosis summary with the following fields:
+            1. Patient Data (if available):
+                - {query}
+            2. Diagnosis:
+                - {combined_result.result_text}
+            3. Confidence Score:
+                - {combined_result.confidence:.2f}
+            4. Patient Explanation:
+                - A brief patient-friendly explanation based on the results from:
+                - {combined_result.result_text}
+                - {combined_result.confidence}
+
+            The response should be structured in a JSON-like format with the following keys:
+                "patient_id" : "{patient_id:.0f}"
+                "patient_data": "{query}",
+                "diagnosis": "{combined_result.result_text}",
+                "confidence_score": "{combined_result.confidence:.2f}",
+                "patient_explanation": based on {combined_result.result_text} and {combined_result.confidence} result"
         """
-        
+                
         analysis_response = genai.GenerativeModel("gemini-2.0-flash").generate_content(prompt)
-
-        return {"analysis_summary": analysis_response.text}
+        if file:
+            # Read the saved image and convert to base64
+            with open("result.png", "rb") as image_file:
+                image_base64 = base64.b64encode(image_file.read()).decode('utf-8')
+        
+            # Return both analysis and image
+            return {
+                "analysis_summary": analysis_response.text,
+                "image": image_base64,
+                "image_type": "image/png"
+            }
+        
+        return {
+                "analysis_summary": analysis_response.text
+        }
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error during combined analysis: {str(e)}")
